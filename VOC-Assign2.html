@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Resumeasy - Quick and Interactive Resume Builder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Source+Code+Pro:wght@400;500;600&family=Merriweather:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="topbar">
+        <div class="brand">
+            <div class="mark">RE</div>
+            Resumeasy
+            <span class="sub">build your resume</span>
+        </div>
+        <div class="topbar-actions">
+            <span id="activeTemplateChip" class="status-chip" style="margin-right:10px;"><span class="status-dot"></span><span id="activeTemplateText">Classic</span></span>
+            <a href="template.html" style="color: #b7d9c4; text-decoration: none; font-weight: 600; margin-right: 10px;">Choose Template</a>
+            <div class="status-chip"><span class="status-dot"></span><span id="statusText">Draft saved locally</span></div>
+        </div>
+    </div>
+
+    <div class="workspace">
+        <div class="panel-editor">
+            <div class="editor-tab"><span class="file-dot">●</span> details.form — editing</div>
+            <div class="editor-body">
+
+                <div class="field-block">
+                    <div class="field-label">Full name <span class="tag">required</span></div>
+                    <input type="text" id="nameInput" placeholder="e.g. Saksham Singh"/>
+                </div>
+
+                <div class="field-block">
+                    <div class="field-label">Email</div>
+                    <input type="email" id="emailInput" placeholder="you@example.com"/>
+                </div>
+
+                <div class="field-block">
+                    <div class="field-label">Phone</div>
+                    <input type="text" id="phoneInput" placeholder="+91 98765 43210"/>
+                </div>
+
+                <div class="field-block">
+                    <div class="field-label">Profile summary</div>
+                    <textarea id="summaryInput" placeholder="Two or three sentences on who you are and what you do best..."></textarea>
+                    <div class="field-hint">Shows just under your name — keep it tight.</div>
+                </div>
+
+                <hr class="divider-line"/>
+
+                <div class="field-block">
+                    <div class="field-label">Skills</div>
+                    <div class="skills-grid" id="skillsGroup">
+                        <label class="skill-pill"><input type="checkbox" value="HTML/CSS" /><span>HTML/CSS</span></label>
+                        <label class="skill-pill"><input type="checkbox" value="JavaScript" /><span>JavaScript</span></label>
+                        <label class="skill-pill"><input type="checkbox" value="React" /><span>React</span></label>
+                        <label class="skill-pill"><input type="checkbox" value="Node.js" /><span>Node.js</span></label>
+                        <label class="skill-pill"><input type="checkbox" value="Python" /><span>Python</span></label>
+                        <label class="skill-pill"><input type="checkbox" value="Java" /><span>Java</span></label>
+                        <label class="skill-pill"><input type="checkbox" value="SQL" /><span>SQL</span></label>
+                        <label class="skill-pill"><input type="checkbox" value="MongoDB" /><span>MongoDB</span></label>
+                        <label class="skill-pill"><input type="checkbox" value="Git" /><span>Git</span></label>
+                        <label class="skill-pill"><input type="checkbox" value="Cybersecurity" /><span>Cybersecurity</span></label>
+                        <label class="skill-pill"><input type="checkbox" value="UI/UX" /><span>UI/UX</span></label>
+                        <label class="skill-pill"><input type="checkbox" value="Data Science" /><span>Data Science</span></label>
+                    </div>
+                </div>
+
+                <hr class="divider-line"/>
+
+                <div class="field-block">
+                    <div class="field-label">Education</div>
+                    <div id="educationContainer">
+                        <div class="dyn-row">
+                            <input type="text" placeholder="Degree / Program" class="edu-degree" />
+                            <input type="text" placeholder="Institution" class="edu-institution" />
+                            <input type="text" placeholder="Year" class="edu-year" />
+                            <div class="dyn-row-foot"><button type="button" class="link-btn remove-edu">Remove</button></div>
+                        </div>
+                    </div>
+                    <button type="button" class="add-row-btn" id="addEducationBtn">+ Add education</button>
+                </div>
+
+                <hr class="divider-line"/>
+
+                <div class="field-block">
+                    <div class="field-label">Experience</div>
+                    <div id="experienceContainer">
+                        <div class="dyn-row">
+                            <input type="text" placeholder="Job title" class="exp-title"/>
+                            <input type="text" placeholder="Company" class="exp-company"/>
+                            <input type="text" placeholder="Duration" class="exp-duration"/>
+                            <div class="dyn-row-foot"><button type="button" class="link-btn remove-exp">Remove</button></div>
+                        </div>
+                    </div>
+                    <button type="button" class="add-row-btn" id="addExperienceBtn">+ Add experience</button>
+                </div>
+
+                <hr class="divider-line"/>
+
+                <div class="field-block">
+                    <div class="field-label">Projects</div>
+                    <div id="projectsContainer">
+                        <div class="dyn-row">
+                            <input type="text" placeholder="Project name" class="proj-name"/>
+                            <input type="text" placeholder="Tech stack (e.g. React, Node.js, MongoDB)" class="proj-stack"/>
+                            <input type="text" placeholder="Short description" class="proj-desc"/>
+                            <input type="text" placeholder="Link (optional)" class="proj-link"/>
+                            <div class="dyn-row-foot"><button type="button" class="link-btn remove-proj">Remove</button></div>
+                        </div>
+                    </div>
+                    <button type="button" class="add-row-btn" id="addProjectBtn">+ Add project</button>
+                </div>
+                <hr class="divider-line"/>
+                <div class="field-block">
+                    <div class="field-label">Certifications</div>
+                    <div id="certificationsContainer">
+                        <div class="dyn-row">
+                            <input type="text" placeholder="Certification name" class="cert-name"/>
+                            <input type="text" placeholder="Issuing organization" class="cert-issuer"/>
+                            <input type="text" placeholder="Year" class="cert-year"/>
+                            <div class="dyn-row-foot"><button type="button" class="link-btn remove-cert">Remove</button></div>
+                        </div>
+                    </div>
+                    <button type="button" class="add-row-btn" id="addCertificationBtn">+ Add certification</button>
+                </div>
+
+                <hr class="divider-line"/>
+
+                <div class="footer-actions">
+                    <button class="btn btn-primary" id="downloadPdfBtn">⬇ Download PDF</button>
+                    <button class="btn btn-secondary" id="printResumeBtn">🖨 Print</button>
+                    <button class="btn btn-ghost" id="clearFormBtn">Clear all</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel-preview">
+            <div class="preview-toolbar">
+                <div class="compile-status">
+                    <span id="progressText">0%</span> complete
+                    <div class="progress-track"><div class="progress-bar" id="progressBar"></div></div>
+                </div>
+                <div class="zoom-note">preview.pdf</div>
+            </div>
+            <div class="preview-scroll">
+                <div class="resume-page" id="resumePreview">
+                    <div class="empty-preview">
+                        <span class="icon">RE</span>
+                        <p>Start filling the form on the left - your resume will render here in real time.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+<!-- Saksham Singh - 2026 -->

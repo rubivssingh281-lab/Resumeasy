@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Choose Template — Resumeasy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Source+Code+Pro:wght@400;500;600&family=Merriweather:wght@700;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="topbar">
+        <div class="brand">
+            <div class="mark">RE</div>
+            Resumeasy
+            <span class="sub">choose your template</span>
+        </div>
+        <div class="step-indicator">Step 1 of 2 · Template</div>
+    </header>
+
+    <section class="hero">
+        <h1>Pick your <span>resume style</span></h1>
+        <p>Choose a template that fits your story — you can always switch later.</p>
+    </section>
+
+    <div class="template-grid" id="templateGrid">
+
+        <div class="template-card" data-template="classic" tabindex="0">
+            <div class="check-mark">✓</div>
+            <div class="template-preview">
+                <div class="mini-resume mini-classic">
+                    <div class="mini-name">Saksham Singh</div>
+                    <div class="mini-section">Experience</div>
+                    <div class="mini-row"><span class="label">Senior Developer</span> <span>2019 – Present</span></div>
+                    <div class="mini-row" style="font-size:5px;color:#666;">Led a team of 8, shipped 12+ products</div>
+                    <div class="mini-section">Education</div>
+                    <div class="mini-row"><span class="label">B.S. Computer Science</span> <span>2015–2019</span></div>
+                    <div style="margin-top:4px;display:flex;gap:3px;flex-wrap:wrap;">
+                        <span style="background:#eee;padding:1px 5px;border-radius:2px;font-size:5px;">React</span>
+                        <span style="background:#eee;padding:1px 5px;border-radius:2px;font-size:5px;">Node</span>
+                        <span style="background:#eee;padding:1px 5px;border-radius:2px;font-size:5px;">Python</span>
+                    </div>
+                </div>
+            </div>
+            <div class="template-meta">
+                <div class="left">
+                    <span class="template-name">Classic</span>
+                    <span class="template-desc">Clean, traditional, timeless</span>
+                </div>
+                <div class="select-radio"></div>
+            </div>
+        </div>
+
+        <div class="template-card" data-template="modern" tabindex="0">
+            <div class="check-mark">✓</div>
+            <div class="template-preview">
+                <div class="mini-resume mini-modern">
+                    <div class="mini-header">
+                        <div class="mini-name">Saksham Singh</div>
+                        <div class="mini-sub">Full-Stack Developer · 5+ years</div>
+                    </div>
+                    <div class="mini-section">Experience</div>
+                    <div class="mini-row"><span>Senior Developer</span> <span>2019 – Present</span></div>
+                    <div style="font-size:5px;color:#666;margin-bottom:3px;">Led team of 8, shipped 12+ products</div>
+                    <div class="mini-section">Skills</div>
+                    <div>
+                        <span class="mini-tag">React</span>
+                        <span class="mini-tag">Node</span>
+                        <span class="mini-tag">Python</span>
+                        <span class="mini-tag">MongoDB</span>
+                    </div>
+                </div>
+            </div>
+            <div class="template-meta">
+                <div class="left">
+                    <span class="template-name">Modern</span>
+                    <span class="template-desc">Clean, colorful, contemporary</span>
+                </div>
+                <div class="select-radio"></div>
+            </div>
+        </div>
+
+        <div class="template-card" data-template="professional" tabindex="0">
+            <div class="check-mark">✓</div>
+            <div class="template-preview">
+                <div class="mini-resume mini-professional">
+                    <div class="mini-sidebar">
+                        <div class="mini-name">Saksham Singh</div>
+                        <div class="mini-item"><strong>Email</strong> saksham@email.com</div>
+                        <div class="mini-item"><strong>Phone</strong> +1 234 567 890</div>
+                        <div class="mini-item" style="margin-top:4px;"><strong>Skills</strong></div>
+                        <div class="mini-item">React, Node, Python</div>
+                        <div class="mini-item" style="margin-top:4px;"><strong>Certifications</strong></div>
+                        <div class="mini-item">AWS Certified</div>
+                    </div>
+                    <div class="mini-main">
+                        <div class="mini-section">Experience</div>
+                        <div class="mini-row"><span>Senior Developer</span> <span>2019–Present</span></div>
+                        <div style="font-size:5px;color:#666;">Led team of 8, shipped 12+ products</div>
+                        <div class="mini-section">Education</div>
+                        <div class="mini-row"><span>B.S. Computer Science</span> <span>2015–2019</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="template-meta">
+                <div class="left">
+                    <span class="template-name">Professional</span>
+                    <span class="template-desc">Structured, formal, sidebar</span>
+                </div>
+                <div class="select-radio"></div>
+            </div>
+        </div>
+
+        <div class="template-card" data-template="creative" tabindex="0">
+            <div class="check-mark">✓</div>
+            <div class="template-preview">
+                <div class="mini-resume mini-creative">
+                    <div class="mini-header">
+                        <div class="mini-avatar">AR</div>
+                        <div class="mini-name">Saksham Singh</div>
+                        <div class="mini-sub">Full-Stack · Creative</div>
+                    </div>
+                    <div class="mini-section">Experience</div>
+                    <div class="mini-row"><span>Senior Developer</span> <span>2019 – Present</span></div>
+                    <div style="font-size:5px;color:#666;margin-bottom:3px;">Led team of 8, shipped 12+ products</div>
+                    <div class="mini-section">Tech Stack</div>
+                    <div>
+                        <span class="mini-badge">React</span>
+                        <span class="mini-badge">Node</span>
+                        <span class="mini-badge">Python</span>
+                        <span class="mini-badge">MongoDB</span>
+                        <span class="mini-badge">AWS</span>
+                    </div>
+                    <div class="mini-section" style="margin-top:3px;">Education</div>
+                    <div class="mini-row"><span>B.S. Computer Science</span> <span>2015–2019</span></div>
+                </div>
+            </div>
+            <div class="template-meta">
+                <div class="left">
+                    <span class="template-name">Creative</span>
+                    <span class="template-desc">Bold, modern, expressive</span>
+                </div>
+                <div class="select-radio"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="continue-bar">
+        <div class="selected-label">
+            <span id="selectedDisplay">No template selected</span>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;">
+            <button class="btn btn-ghost" id="resetBtn">↻ Reset</button>
+            <button class="btn btn-primary" id="continueBtn" disabled>
+                Continue to Builder →
+            </button>
+        </div>
+    </div>
+    <div class="footer-note">
+        Resumeasy · built with care · <a href="#" id="backLink">← back to home</a>
+    </div>
+
+    <script>
+
+        (function () {
+            const grid = document.getElementById('templateGrid');
+            const cards = grid.querySelectorAll('.template-card');
+            const continueBtn = document.getElementById('continueBtn');
+            const selectedDisplay = document.getElementById('selectedDisplay');
+            const resetBtn = document.getElementById('resetBtn');
+
+            let selectedTemplate = null;
+
+            function selectTemplate(templateId) {
+
+                cards.forEach(c => c.classList.remove('selected'));
+
+                let found = null;
+                cards.forEach(c => {
+                    if (c.dataset.template === templateId) {
+                        c.classList.add('selected');
+                        found = c;
+                    }
+                });
+                if (found) {
+                    selectedTemplate = templateId;
+                    const name = found.querySelector('.template-name')?.textContent || templateId;
+                    selectedDisplay.innerHTML = `Selected: <strong>${name}</strong>`;
+                    continueBtn.disabled = false;
+                } else {
+                    selectedTemplate = null;
+                    selectedDisplay.textContent = 'No template selected';
+                    continueBtn.disabled = true;
+                }
+            }
+
+
+            cards.forEach(card => {
+                card.addEventListener('click', function (e) {
+                    const templateId = this.dataset.template;
+                    selectTemplate(templateId);
+                });
+
+                card.addEventListener('keydown', function (e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        const templateId = this.dataset.template;
+                        selectTemplate(templateId);
+                    }
+                });
+            });
+
+            continueBtn.addEventListener('click', function () {
+                if (!selectedTemplate) return;
+                localStorage.setItem('resumeasy_template', selectedTemplate);
+                window.location.href = 'VOC-Assign2.html';
+            });
+
+
+            resetBtn.addEventListener('click', function () {
+                cards.forEach(c => c.classList.remove('selected'));
+                selectedTemplate = null;
+                selectedDisplay.textContent = 'No template selected';
+                continueBtn.disabled = true;
+                localStorage.removeItem('resumeasy_template');
+            });
+
+            document.getElementById('backLink').addEventListener('click', function (e) {
+                e.preventDefault();
+
+                window.location.href = 'index.html';
+            });
+            const stored = localStorage.getItem('resumeasy_template');
+            if (stored) {
+                const exists = Array.from(cards).some(c => c.dataset.template === stored);
+                if (exists) {
+                    selectTemplate(stored);
+                }
+            }
+        })();
+    </script>
+</body>
+</html>
